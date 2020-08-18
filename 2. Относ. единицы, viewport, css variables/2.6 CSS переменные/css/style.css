@@ -1,0 +1,29 @@
+/* ? В :root обозначаены значения для переменных css. Переменные css пишутся начиная с двух дефисов (--) */
+:root {
+   font-size: calc(0.5em + 1vw);
+   --main-bg: #fff;
+   --main-color: #000;
+}
+/* ? CSS переменные пишутся в виде: var(имя переменной, резервный стиль) */
+.panel {
+   font-size: 1rem;
+   padding: 1em;
+   border: 1px solid #999;
+   border-radius: 0.5em;
+   background-color: var(--main-bg, blue);
+   color: var(--main-color);
+}
+panel > h2 {
+   margin-top: 0;
+   font-size: 0.8em;
+   font-weight: bold;
+   text-transform: uppercase;
+}
+/* !Переопределение значений переменных для контейнера .dark . Новые значения наследуются и другими доч. элементами. */
+.dark {
+   margin-top: 2em;
+   padding: 1em;
+   background-color: #999;
+   --main-bg: #333;
+   --main--color: #fff;
+}

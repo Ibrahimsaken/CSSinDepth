@@ -1,0 +1,28 @@
+/*
+ ?vw, vh - 1/100 ширины и высоты области просмотра
+ ?vmin, vmax - 1/100 наименьших и наибольших высоты и ширины
+ */
+/* ?Вычисление размера шрифта с помощью calc и единиц vw для адаптивности */
+:root {
+   font-size: calc(0.5em + 1vw);
+}
+
+/* 
+! if ( width > height, 1vmax==1vw)
+! if ( width < height, 1vmax==1vh)
+! if ( width > height, 1vmin==1vh)
+! if ( width < height, 1vmin==1vw)
+ */
+.square {
+   width: 100vmin;
+   height: 40vmin;
+   background-color: #396;
+   margin: 20px auto;
+}
+
+.about-us {
+   /* font-size: 2em; */
+   width: 1000px;
+   border: 1px silver solid;
+   margin: auto;
+}

@@ -1,0 +1,161 @@
+:root {
+   box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+   box-sizing: inherit;
+}
+
+body {
+   background-color: #709b90;
+   font-family: Helvetica, Arial, sans-serif;
+   padding: 0.5em;
+}
+
+body * + * {
+   margin-top: 1.5em;
+}
+
+.container {
+   max-width: 1080px;
+   margin: 0 auto;
+}
+
+.site-nav {
+   display: flex;
+   padding: 0.5em;
+   background-color: #5f4b44;
+   list-style-type: none;
+}
+
+.site-nav li {
+   margin-top: 0;
+}
+
+.site-nav > li + li {
+   margin-left: 1.5em;
+}
+
+.site-nav > .nav-right {
+   margin-left: auto;
+}
+
+.site-nav > li > a {
+   display: block;
+   padding: 0.5em 1em;
+   background-color: #cc6b5a;
+   color: white;
+   text-decoration: none;
+}
+
+.title {
+   padding: 1.5em;
+   background-color: #fff;
+}
+
+.flex {
+   display: flex;
+}
+
+.flex > * + * {
+   margin-top: 0;
+   margin-left: 1.5em;
+}
+
+.column-main {
+   flex: 66.67%;
+}
+
+.column-sidebar {
+   flex: 33.33%;
+   display: flex;
+   flex-direction: column;
+}
+
+.title {
+   flex: 1 1 auto;
+}
+
+.login-form > h3 {
+   margin: 0;
+   font-size: 0.9em;
+   font-weight: bold;
+   text-align: right;
+   text-transform: uppercase;
+}
+
+.login-form input:not([type="checkbox"]):not([type="radio"]) {
+   display: block;
+   margin: top;
+   width: 100%;
+}
+
+.login-form button {
+   margin-top: 1em;
+   border: 1px solid #cc6b5a;
+   background-color: #fff;
+   padding: 0.5em 1em;
+   cursor: pointer;
+}
+
+.login-form button:hover {
+   background-color: #cc6b5a;
+   color: #fff;
+}
+
+.row {
+   background-color: blue;
+   margin-top: 1.5em;
+   padding: 0.5em;
+   display: flex;
+   height: 500px;
+   flex-direction: column;
+}
+
+.centered {
+   text-align: center;
+}
+
+.cost {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   line-height: 0.7;
+}
+
+.cost > span {
+   margin-top: 0;
+}
+
+.cost-currency {
+   font-size: 2rem;
+}
+
+.cost-roubles {
+   font-size: 4rem;
+}
+
+.cost-kopecks {
+   font-size: 1.5rem;
+   align-self: flex-start;
+}
+
+.cta-button {
+   display: block;
+   background-color: #cc6b5a;
+   color: white;
+   padding: 0.5em 1em;
+   text-decoration: none;
+}
+
+/*
+ !Итоги главы:
+ ?1. Используйте flexbox для создания адаптивной, легкой в управлении разметки страницы
+ ?2. Используйте Autoprefixer для лучшей поддержки flexbox
+ ?3. Используйте значение flex чтобы задать практически любую комбницаию размеров
+ ?4. Вкладывайте flex блоки друг в друга для построения болле сложных структур
+ ?5. Flexbox верстка создает контейнеры равной высоты
+ ?6. Используйте align-items, align-self для верт. выравнивания
+*/

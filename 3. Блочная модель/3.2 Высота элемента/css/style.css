@@ -1,0 +1,79 @@
+/* !Нужно избегать ставить фиксированные значения высоты контейнеров, но чтобы реализовать контейнеры с одиноковой высотой можно использовать технологий table, flexbox, grid. Но верстка с table давно устарела и не желательна для использования. */
+
+/* ?Используйте min-height и min-width чтобы котейнер не переолнялся */
+:root {
+   box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+   box-sizing: inherit;
+}
+
+body *+* {
+   margin-top: 1.5em;
+}
+
+body {
+   background-color: #eee;
+   font-family: Helvetica, Arial, sans-serif;
+
+}
+
+header {
+   padding: 1em 1.5em;
+   color: #fff;
+   background-color: #0072b0;
+   border-radius: 0.5em;
+}
+
+main {
+   display: block;
+}
+
+.container {
+   display: flex;
+}
+
+.main {
+   width: 70%;
+   background-color: #fff;
+   border-radius: 0.5em;
+   padding: 1em 1.5em;
+}
+
+.sidebar {
+   width: 30%;
+   padding: 1.5em;
+   margin-left: 1.5em;
+   background-color: #fff;
+   border-radius: 0.5em;
+   margin-top: 0;
+}
+
+.button-link {
+   display: block;
+   padding: .5em;
+   color: #fff;
+   background-color: #0090c9;
+   text-align: center;
+   text-decoration: none;
+   text-transform: uppercase;
+}
+
+.sponsor-link {
+   display: block;
+   color: #0072b0;
+   font-weight: bold;
+   text-decoration: none;
+}
+
+/*
+ !Итоги главы :
+ ?1.Всегда работайте с border-box
+ ?2.Избегайте явной установки высоты элемента во избежание переполнения контейнера
+ ?3.Используйте современные технологий как display: flex
+ ?4.Если поля ведут себя странно, выполните нужные дкйствия чтобы предотваратить схлопывание
+ ?5.Помните про метод лоботомированный совы.
+ */

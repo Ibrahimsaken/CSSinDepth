@@ -1,0 +1,80 @@
+:root {
+   box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+   box-sizing: inherit;
+}
+
+body {
+   background-color: #eee;
+   font-family: Helvetica, Arial, sans-serif;
+}
+
+.container {
+   max-width: 1080px;
+   margin: 0 auto;
+}
+
+body *+* {
+   margin-top: 1.5em;
+}
+
+header {
+   padding: 1em 1.5em;
+   color: #fff;
+   background-color: #0072b0;
+   border-radius: 0.5em;
+   margin-bottom: 1.5em;
+}
+
+.main {
+   padding: 0 1.5em;
+   background-color: #fff;
+   border-radius: 0.5em;
+}
+
+.media {
+   float: left;
+   width: calc(50% - 1.5em);
+   padding: 1.5em;
+   background-color: #eee;
+   border-radius: 0.5em;
+   margin: 0 1.5em 1.5em 0;
+}
+
+.media img {
+   width: 100px;
+   height: 100px;
+   float: left;
+   margin-right: 1.5em;
+}
+
+/* ! Свойство overflow: auto отделяет текст от картинки создв блок контекстного форматирования */
+.media-body {
+   margin-top: 0;
+   overflow: auto;
+}
+
+.media-body h4 {
+   margin-top: 0;
+}
+
+/* ! Исправление высоты родителських элементов которые содержать плавающие элементы (float) */
+.clearfix::before,
+.clearfix::after {
+   display: table;
+   content: " ";
+}
+
+/* !отмена обтекания со всех сторон */
+.clearfix::after {
+   clear: both;
+}
+
+/* ! Отмена обтекания нечетных элементов чтобы выровнять медиобъекты */
+.media:nth-child(odd) {
+   clear: left;
+}

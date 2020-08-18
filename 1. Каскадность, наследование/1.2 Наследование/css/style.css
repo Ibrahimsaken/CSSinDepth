@@ -1,0 +1,125 @@
+/* 
+?Наследуемые свойства шрифтов:
+color,
+font,font-family,
+font-size,
+font-weight,
+font-variant,
+font-style,
+line-height,
+letter-spacing,
+text-align,
+text-indent,
+text-transform,
+white-space,
+word-spacing
+
+?Наследуемые свойства списков:
+list-style,
+list­-style-type,
+list-style-position,
+list-style-image
+
+?Наследуемые свойства границ таблицы:
+border-coolapse,
+border-spacing
+*/
+
+/* ?Страница наследует семейство шрифтов sans-serif от элемента body */
+body {
+   margin: 0;
+   padding: 20px 0 0 20px;
+   box-sizing: border-box;
+   font-family: sans-serif;
+}
+
+/* Стили ссылок с правильным порядком, для корректного отображения */
+a:link {
+   color: blue;
+   text-decoration: none;
+}
+
+a:visited {
+   color: purple;
+}
+
+a:hover {
+   text-decoration: underline;
+}
+
+a-.active {
+   color: red;
+}
+
+.nav {
+   margin-top: 10px;
+   list-style: none;
+   padding-left: 0;
+}
+
+.nav li {
+   display: inline-block;
+}
+
+/*
+ ?Сокращенные значения для margin и padding, записываются по часовой стрелке начиная с - top
+   свойство: 10px; Одинаковый отступ для всех сторон
+   свойство: 5px 10px; Отступ 5px сверху и снизу, 10px для левого и правого края
+   свойство: 5px 10px 15px; Отступ 5px сверху, 10px для левого и правого края, 15px для нижнего
+   свойство: 5px 5px 5px 5px; Отступ 5px для всех краев по часовой стрелке
+
+ */
+.nav a {
+   color: white;
+   background-color: #13a4a4;
+   padding: 5px;
+   border-radius: 2px;
+   text-decoration: none;
+   padding: 5px 15px;
+}
+
+/* ?Значения box-shadow записывается по системе координат x(горизантальное смещение) и y(вертикальное смещение); */
+.nav .featured {
+   background-color: orange;
+   box-shadow: 5px 5px #6f9090;
+}
+
+h1 {
+   color: #2f4f4f;
+   margin-bottom: 10px;
+   font-weight: bold;
+}
+
+/* ?Для .title указаны сокращенный вид стилей для шрифта, но другие стили не указанные в этом объявлений берут стили по умолчанию либо от род. элемента. Перед использованием скоращенных стилей это так же нужно учитывать */
+.title {
+   font: 32px Helvetica, Arial, sans-serif;
+}
+
+.footer {
+   color: #666;
+   background-color: #ccc;
+   text-align: center;
+   padding: 15px 0;
+   font-size: 14px;
+}
+
+/* ?Ссылка подвала унаследовало свойство color от родительского элемента .footer, с помощью значения inherit . Переопределив свои каскадные стили. */
+.footer a {
+   color: inherit;
+   /* color: inital; Возврщает стили браузера по умолчанию для заданного свойства, которым является цвет black для любого текста */
+   text-decoration: underline;
+}
+
+/*
+ !Если вы работаете со свойством,которое принимает два значения, х и y ,вспом­ните прямоугольную систему координат,если же со свойством,определяющим значения для всех сторон элемента,—часы.
+  */
+
+/* 
+  !Итоги главы:
+  ?1. Контролируйте специфичность селекторов.
+  ?2. Не путайте каскадность с наследованием.
+  ?3. Некоторые свойства наследуются в том числе для текста,списков и границ таблиц.
+  ?4. Не путайте значения initial и auto.
+  ?5. Остерегайтесь сокращений,скрыто переопределяющих другие стили.
+  ?6. Представляйте прямоугольную систему координат,работая с двузначными свой­ствами,и часы,используя четырехзначные. 
+*/
