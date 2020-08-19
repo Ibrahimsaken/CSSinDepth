@@ -1,0 +1,36 @@
+/* !Единицы rem берут свои значения не от родительского или текущего элемента. Значения берутся из корневого узла (:root). В данном случае значение равно 16px, относительно значения браузера по умолчанию.*/
+:root {
+   font-size: 0.75em;
+}
+
+.panel {
+   font-size: 1rem;
+   padding: 1em;
+   border-radius: 0.5em;
+   border: 1px solid #999;
+   margin: 0 0 10px 0;
+}
+
+/* !h2 берет размер шрифта относительно(em) родительского элемента .panel. Таким способом при изменений значений .panel изменятся и размер загаловка */
+.panel>h2 {
+   margin-top: 0;
+   font-size: 0.8em;
+   font-weight: bold;
+   text-transform: uppercase;
+}
+
+.panel.large {
+   font-size: 1.2rem;
+}
+
+@media(min-width: 800px) {
+   :root {
+      font-size: 0.875em;
+   }
+}
+
+@media(min-width: 1200px) {
+   :root {
+      font-size: 1em;
+   }
+}
