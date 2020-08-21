@@ -1,12 +1,13 @@
 html {
-   --brand-green: #076448;
-   --dark-green: #099268;
-   --medium-green: #20c997;
-   --text-color: #212529;
-   --gray: #868e96;
-   --light-gray: #f1f3f5;
-   --extra-light-gray: #f8f9fa;
-   --white: #fff;
+   --brand-green: hsl(161.9, 86.9%, 21%);
+   --dark-green: hsl(161.6, 88.4%, 30.4%);
+   --medium-green: hsl(162.2, 72.5%, 45.7%);
+   --text-color: hsl(210, 10.8%, 14.5%);
+   --gray: hsl(210, 7.1%, 55.7%);
+   --light-gray: hsl(210, 16.7%, 95.3%);
+   --extra-light-gray: hsl(210, 16.7%, 97.6%);
+   --white: hsl(0, 0%, 100%);
+   --red: hsl(342, 63%, 46%);
 
    box-sizing: border-box;
    color: var(--text-color);
@@ -44,7 +45,9 @@ a:hover {
    color: var(--brand-green);
 }
 
-a:active {}
+a:active {
+   color: var(--red);
+}
 
 .nav-container {
    background-color: var(--medium-green);
@@ -55,6 +58,7 @@ a:active {}
    margin: 0 auto;
    display: flex;
    justify-content: space-between;
+   padding: 0.625em 0;
 }
 
 .home-link a {
@@ -68,6 +72,11 @@ a:active {}
 .top-nav {
    display: flex;
    list-style-type: none;
+   margin: 0;
+}
+
+.top-nav>li+li {
+   margin-left: .625em;
 }
 
 .top-nav a {
@@ -97,12 +106,14 @@ a:active {}
 .hero__inner {
    max-width: 1080px;
    margin: 0 auto;
-   padding: 50px 0 200px;
+   padding: 5.56em 12.5em 12.5em 0;
    text-align: right;
 }
 
 .hero h2 {
    font-size: 1.95rem;
+   margin-top: 0;
+   margin-bottom: .625rem;
 }
 
 .button {
@@ -115,7 +126,7 @@ a:active {}
    font-size: 1rem;
 }
 
-.button.button--cta {
+.button.cta {
    padding: 0.6em 1em;
    background-color: var(--brand-green);
    color: var(--white);
@@ -140,9 +151,18 @@ a:active {}
    flex: 1;
 }
 
+.title-row>*+* {
+   margin-left: 1.5625em;
+}
+
 .title {
    background-color: var(--white);
-   border-radius: .3em;
+   border-radius: 0.3em;
+   padding: 1.5625em;
+}
+
+.title>h4 {
+   margin-bottom: 1.5em;
 }
 
 .page-footer {
@@ -156,5 +176,33 @@ a:active {}
    margin: 0 auto;
    width: 1080px;
    text-align: center;
-   font-size: .8rem;
+   font-size: 0.8rem;
 }
+
+p {
+   margin-top: 1.5em;
+   margin-bottom: 1.5em;
+}
+
+.tag-list {
+   list-style: none;
+   padding-left: 0;
+}
+
+.tag-list>li {
+   display: inline;
+   padding: .3rem .5rem;
+   font-size: .8rem;
+   border-radius: .2rem;
+   background-color: var(--light-gray);
+   line-height: 2.6;
+}
+
+/* 
+!Итоги главы:
+?1. Применяйте контраст выборочно, чтобы привлечь внимание к определенным частям страницы.
+?2. Используйте значения HSL, чтобы упоростить работу с цветом и сделать ее более наглядной.
+?3. Доверяйте дизайнеру в мелочах.
+?4. Найдите время для создания хорошей разметки.
+?5. И помните, что высота строки может повлиять на то, как элементы распологаются относительно друг друга по вертикали.
+*/
