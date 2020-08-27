@@ -1,0 +1,25 @@
+/* С помощью свойства transition осуществляется плавный переход значений
+
+!Краткая форма записи переходов:
+transition: -property, -duration, -timing-function, -delay;
+
+?transition-property: background; - свойство к которому применяется переход
+?transition-duration: 0.3s; - Продолжительность перехода
+?transition-timing-function; - Функция времени(Подробнее в главе 14.2)
+?transition-delay: 0.5s; - Задержка перед переходом
+*/
+button {
+   background-color: hsl(180, 50%, 50%);
+   border: 0;
+   color: white;
+   font-size: 1rem;
+   padding: 0.3em 0.1em;
+   transition-property: all;
+   transition-duration: 0.5s;
+}
+
+button:hover {
+   background-color: hsl(0, 50%, 50%);
+   border-radius: 1em;
+   font-size: 2rem;
+}
