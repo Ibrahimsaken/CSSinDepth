@@ -1,0 +1,68 @@
+body {
+   font-family: Helvetica, Arial, sans-serif;
+}
+
+.dropdown__toggle {
+   display: block;
+   padding: 0.5em 1em;
+   border: 1px solid hsl(280, 10%, 80%);
+   color: hsl(280, 10%, 80%);
+   background-color: white;
+   font: inherit;
+   text-decoration: none;
+   transition: background-color 0.2s linear;
+}
+
+.dropdown__toggle:hover {
+   background-color: hsl(280, 15%, 95%);
+}
+
+/* !Свойство display неанимируется поэтому, для применения плавных переходов используются свойства opacity и visibility */
+.dropdown__drawer {
+   position: absolute;
+   opacity: 0;
+   visibility: hidden;
+   transition: opacity 0.2s linear,
+      visibility 0s linear .2s;
+   background-color: #fff;
+   width: 10em;
+}
+
+.dropdown.is-open .dropdown__drawer {
+   opacity: 1;
+   visibility: visible;
+   transition-delay: 0s;
+}
+
+.menu {
+   padding-left: 0;
+   margin: 0;
+   list-style: none;
+}
+
+.menu>li+li>a {
+   border-top: 0;
+}
+
+.menu>li>a {
+   display: block;
+   padding: 0.5em 1em;
+   color: hsl(280, 40%, 60%);
+   background-color: #fff;
+   text-decoration: none;
+   transition: all 0.2s linear;
+   border: 1px solid hsl(280, 10%, 80%);
+}
+
+.menu>li>a:hover {
+   background-color: hsl(280, 15%, 95%);
+   color: hsl(280, 25%, 10%);
+}
+
+/* 
+!Итоги главы 14:
+?1. Можно использовать переходы для сглаживания резких изменений
+?2. Чтобы привлечь внимание пользователя, применяйте ускоряющееся движение.
+?3. Чтобы показать пользователю, что его действие вступило в силу, используйте замедляющееся движение.
+?4. Можете задействовать JavaScript, чтобы скоординировать переходы с изменениями имен классов, когда CSS- код не способен обеспечить то, что вам нужно.
+*/
