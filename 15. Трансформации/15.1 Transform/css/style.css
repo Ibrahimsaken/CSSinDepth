@@ -1,0 +1,18 @@
+body {
+   background-color: hsl(210, 80%, 20%);
+   font-family: Helvetica, Arial, sans-serif;
+}
+
+img {
+   max-width: 100%;
+}
+
+/* ?Любая трансформация начинается с точки трансформации. Точку трансформации можно назначить самостоятельно свойства transform-origin */
+.card {
+   padding: .5em;
+   margin: 0 auto;
+   background-color: white;
+   max-width: 300px;
+   transform-origin: 0 50%;
+   transform: translate(20px, 0) rotate(15deg);
+}
